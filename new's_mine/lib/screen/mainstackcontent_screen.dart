@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
 import 'package:picnic_news_my/screen/main_screen.dart';
-import 'package:picnic_news_my/widget/circleIcon_widget.dart';
+import 'package:picnic_news_my/test.dart';
 
 Stack MainStackContent(BuildContext context) {
   return Stack(
@@ -46,17 +46,37 @@ Stack MainStackContent(BuildContext context) {
         ),
       ),
       SizedBox(
-        height: MainScreenState().mediaHeight(context, 0.54),
+        height: MainScreenState().mediaHeight(context, 0.57),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            circleIcon(false),
-            circleIcon(true),
-            circleIcon(false),
-            circleIcon(false),
+            circleIcon(1),
+            circleIcon(2),
+            circleIcon(3),
+            circleIcon(4),
           ],
         ),
       )
     ],
+  );
+}
+
+Widget circleIcon(int onoff) {
+  double circlesize = 14.0;
+  Color circlecolor = Colors.white.withOpacity(0.6);
+
+  return IconButton(
+    constraints: const BoxConstraints(),
+    padding: EdgeInsets.zero,
+    splashRadius: 1,
+    onPressed: () {
+      Test.test1[onoff] = !Test.test1[onoff]!;
+      Test.test1[onoff]! ? print("object") : print("no");
+    },
+    icon: Icon(
+      Test.test1[onoff]! ? Icons.circle : Icons.circle_outlined,
+      color: circlecolor,
+      size: circlesize,
+    ),
   );
 }
