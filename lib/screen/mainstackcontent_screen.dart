@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
-import 'package:picnic_news_my/screen/main_screen.dart';
 import 'package:picnic_news_my/test.dart';
 
 Stack MainStackContent(BuildContext context) {
@@ -36,8 +35,14 @@ Stack MainStackContent(BuildContext context) {
                       fontSize: 13,
                     ),
                   ),
-                  SizedBox(
-                    height: mediaHeight(context, 0.04),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      circleIcon(1),
+                      circleIcon(2),
+                      circleIcon(3),
+                      circleIcon(4),
+                    ],
                   )
                 ],
               ),
@@ -45,24 +50,12 @@ Stack MainStackContent(BuildContext context) {
           ],
         ),
       ),
-      SizedBox(
-        height: MainScreenState().mediaHeight(context, 0.57),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            circleIcon(1),
-            circleIcon(2),
-            circleIcon(3),
-            circleIcon(4),
-          ],
-        ),
-      )
     ],
   );
 }
 
 Widget circleIcon(int onoff) {
-  double circlesize = 14.0;
+  double circlesize = 11.0;
   Color circlecolor = Colors.white.withOpacity(0.6);
 
   return IconButton(
