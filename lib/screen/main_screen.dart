@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:picnic_news_my/sample02.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
 import 'package:picnic_news_my/screen/mainstackcontent_screen.dart';
 
@@ -27,6 +28,19 @@ class MainScreenState extends State<MainScreen> {
           child: Column(
             children: [
               MainStackContent(context),
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  sample02(Icons.fireplace, "인기"),
+                  sample02(Icons.monetization_on, "정치/경제"),
+                  sample02(Icons.science, "IT/과학"),
+                  sample02(Icons.wordpress_outlined, "세계"),
+                  sample02(Icons.sports, "스포츠"),
+                ],
+              )
             ],
           ),
         ),
