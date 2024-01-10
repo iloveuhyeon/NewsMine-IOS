@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
-import 'package:picnic_news_my/test.dart';
+import 'package:picnic_news_my/sample01.dart';
 
 Stack MainStackContent(BuildContext context) {
   return Stack(

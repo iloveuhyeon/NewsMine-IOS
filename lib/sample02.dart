@@ -1,19 +1,27 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-Column sample02(IconData icon, String text) {
+sample02(IconData icon, String text) {
   return Column(
     children: [
-      Icon(
-        icon,
-        size: 70,
-        color: Colors.blue,
+      Container(
+        width: 70,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: Color(0xff0047ff),
+        ),
+        child: Icon(
+          icon,
+          size: 40,
+          color: Colors.white,
+        ),
       ),
       Text(
         text,
         style: const TextStyle(
           fontWeight: FontWeight.w600,
           fontSize: 16,
-          color: Colors.blue,
+          color: Color(0xff0047ff),
         ),
       )
     ],

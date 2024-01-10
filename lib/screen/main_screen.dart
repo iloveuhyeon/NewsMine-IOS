@@ -29,7 +29,7 @@ class MainScreenState extends State<MainScreen> {
             children: [
               MainStackContent(context),
               const SizedBox(
-                height: 40,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
