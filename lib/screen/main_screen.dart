@@ -31,15 +31,18 @@ class MainScreenState extends State<MainScreen> {
               const SizedBox(
                 height: 30,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  sample02(Icons.fireplace, "인기"),
-                  sample02(Icons.monetization_on, "정치/경제"),
-                  sample02(Icons.science, "IT/과학"),
-                  sample02(Icons.wordpress_outlined, "세계"),
-                  sample02(Icons.sports, "스포츠"),
-                ],
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    sample02(Icons.fireplace, "인기", true),
+                    sample02(Icons.monetization_on, "정치/경제", false),
+                    sample02(Icons.science, "IT/과학", false),
+                    sample02(Icons.wordpress_outlined, "세계", false),
+                    sample02(Icons.sports, "스포츠", false),
+                  ],
+                ),
               )
             ],
           ),
