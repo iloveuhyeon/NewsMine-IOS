@@ -29,7 +29,7 @@ AppBar appbar(BuildContext context) {
         child: IconButton(
           onPressed: () {},
           icon: const Icon(Icons.search),
-          color: const Color(0xff0047ff),
+          color: const Color(0xff366dff),
           iconSize: mediaHeight(context, 0.04),
           splashRadius: 25,
         ),
