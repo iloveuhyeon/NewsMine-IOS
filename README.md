@@ -1,16 +1,10 @@
-# picnic_news_my
+# News_Mine
 
-A new Flutter project.
+A Aing's New Project  
 
-## Getting Started
+## NewsMine이란?
 
-This project is a starting point for a Flutter application.
+요즘 시대에서 뉴스르 보는 학생들은 많지 않습니다.
+그것을 위해 우리는 하눈에 보기쉬운 NewsMine을 계획했습니다.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(추가 문구 추후 추가할 예정)
