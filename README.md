@@ -1,6 +1,6 @@
 # News_Mine
 
-A Aing's New Project  
+Aing's New Project  
 
 ## NewsMine이란?
 
