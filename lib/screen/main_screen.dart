@@ -36,27 +36,27 @@ class MainScreenState extends State<MainScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    CircleButton(
+                    circleButton(
                       icon: Icons.fire_extinguisher,
                       text: "인기",
                       choice: 1,
                     ),
-                    CircleButton(
+                    circleButton(
                       icon: Icons.monetization_on,
                       text: "정치/경제",
                       choice: 2,
                     ),
-                    CircleButton(
+                    circleButton(
                       icon: Icons.science,
                       text: "IT/과학",
                       choice: 3,
                     ),
-                    CircleButton(
+                    circleButton(
                       icon: Icons.wordpress_outlined,
                       text: "세계",
                       choice: 4,
                     ),
-                    CircleButton(
+                    circleButton(
                       icon: Icons.sports,
                       text: "스포츠",
                       choice: 5,
@@ -71,7 +71,7 @@ class MainScreenState extends State<MainScreen> {
     );
   }
 
-  Widget CircleButton(
+  Widget circleButton(
       {required int choice, required String text, required IconData icon}) {
     return Column(
       children: [
