@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/sample02.dart';
+import 'package:picnic_news_my/sample01.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
 import 'package:picnic_news_my/screen/mainstackcontent_screen.dart';
 
@@ -36,11 +36,31 @@ class MainScreenState extends State<MainScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    sample02(Icons.fireplace, "인기", true),
-                    sample02(Icons.monetization_on, "정치/경제", false),
-                    sample02(Icons.science, "IT/과학", false),
-                    sample02(Icons.wordpress_outlined, "세계", false),
-                    sample02(Icons.sports, "스포츠", false),
+                    CircleButton(
+                      icon: Icons.fire_extinguisher,
+                      text: "인기",
+                      choice: 1,
+                    ),
+                    CircleButton(
+                      icon: Icons.monetization_on,
+                      text: "정치/경제",
+                      choice: 2,
+                    ),
+                    CircleButton(
+                      icon: Icons.science,
+                      text: "IT/과학",
+                      choice: 3,
+                    ),
+                    CircleButton(
+                      icon: Icons.wordpress_outlined,
+                      text: "세계",
+                      choice: 4,
+                    ),
+                    CircleButton(
+                      icon: Icons.sports,
+                      text: "스포츠",
+                      choice: 5,
+                    ),
                   ],
                 ),
               )
@@ -48,6 +68,54 @@ class MainScreenState extends State<MainScreen> {
           ),
         ),
       ),
+    );
+  }
+
+  Widget CircleButton(
+      {required int choice, required String text, required IconData icon}) {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsetsDirectional.all(6),
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Test.test2[choice]! ? Colors.white : const Color(0xff366dff),
+            border: Border.all(
+              color: const Color(0xff366dff),
+              width: 3,
+            ),
+          ),
+          child: Center(
+            child: IconButton(
+              onPressed: () {
+                setState(() {
+                  Test.test2.forEach((key, value) {
+                    Test.test2[key] = (key == choice) ? true : false;
+                  });
+                });
+
+                Test.test2[choice]! ? print("object") : print("no");
+              },
+              icon: Icon(icon),
+              color:
+                  Test.test2[choice]! ? const Color(0xff366dff) : Colors.white,
+              iconSize: 30,
+              splashRadius: 30,
+            ),
+          ),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        Text(
+          text,
+          style: const TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 15,
+            color: Color(0xff366dff),
+          ),
+        )
+      ],
     );
   }
 }

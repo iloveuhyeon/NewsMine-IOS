@@ -62,24 +62,29 @@ class _MainContentState extends State<MainContent> {
       ],
     );
   }
-}
 
-Widget circleIcon(int onoff) {
-  double circlesize = 11.0;
-  Color circlecolor = Colors.white.withOpacity(0.6);
+  Widget circleIcon(int onoff) {
+    double circlesize = 11.0;
+    Color circlecolor = Colors.white.withOpacity(0.6);
 
-  return IconButton(
-    constraints: const BoxConstraints(),
-    padding: EdgeInsets.zero,
-    splashRadius: 1,
-    onPressed: () {
-      Test.test1[onoff] = !Test.test1[onoff]!;
-      Test.test1[onoff]! ? print("object") : print("no");
-    },
-    icon: Icon(
-      Test.test1[onoff]! ? Icons.circle : Icons.circle_outlined,
-      color: circlecolor,
-      size: circlesize,
-    ),
-  );
+    return IconButton(
+      constraints: const BoxConstraints(),
+      padding: EdgeInsets.zero,
+      splashRadius: 1,
+      onPressed: () {
+        setState(() {
+          Test.test1.forEach((key, value) {
+            Test.test1[key] = (key == onoff) ? true : false;
+          });
+        });
+
+        Test.test1[onoff]! ? print("object") : print("no");
+      },
+      icon: Icon(
+        Test.test1[onoff]! ? Icons.circle : Icons.circle_outlined,
+        color: circlecolor,
+        size: circlesize,
+      ),
+    );
+  }
 }
