@@ -27,7 +27,7 @@ class MainScreenState extends State<MainScreen> {
           padding: EdgeInsets.only(top: mediaHeight(context, 0.02)),
           child: Column(
             children: [
-              MainStackContent(context),
+              const MainContent(),
               const SizedBox(
                 height: 30,
               ),
