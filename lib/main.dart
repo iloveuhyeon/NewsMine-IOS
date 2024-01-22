@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/screen/splash_screen.dart';
+import 'package:picnic_news_my/screen/main_page/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());

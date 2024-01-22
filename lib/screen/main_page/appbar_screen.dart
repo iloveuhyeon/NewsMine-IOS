@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/screen/splash_screen.dart';
+import 'package:picnic_news_my/screen/main_page/splash_screen.dart';
 
 double mediaHeight(BuildContext context, double height) =>
     MediaQuery.of(context).size.height * height;

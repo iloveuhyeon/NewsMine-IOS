@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/sample01.dart';
-import 'package:picnic_news_my/screen/appbar_screen.dart';
-import 'package:picnic_news_my/screen/mainstackcontent_screen.dart';
-import 'package:picnic_news_my/screen/newsList.dart';
+import 'package:picnic_news_my/sample/sample01.dart';
+import 'package:picnic_news_my/model/mainStackContent.dart';
+import 'package:picnic_news_my/model/newsList.dart';
+import 'package:picnic_news_my/screen/main_page/appbar_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -69,6 +69,10 @@ class MainScreenState extends State<MainScreen> {
                 height: 30,
               ),
               const NewsList(),
+              const NewsList(),
+              const NewsList(),
+              const NewsList(),
+              const NewsList(),
             ],
           ),
         ),
@@ -78,49 +82,54 @@ class MainScreenState extends State<MainScreen> {
 
   Widget circleButton(
       {required int choice, required String text, required IconData icon}) {
-    return Column(
-      children: [
-        Container(
-          padding: const EdgeInsetsDirectional.all(6),
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: Test.test2[choice]! ? Colors.white : const Color(0xff366dff),
-            border: Border.all(
-              color: const Color(0xff366dff),
-              width: 3,
-            ),
-          ),
-          child: Center(
-            child: IconButton(
-              onPressed: () {
-                setState(() {
-                  Test.test2.forEach((key, value) {
-                    Test.test2[key] = (key == choice) ? true : false;
-                  });
-                });
-
-                Test.test2[choice]! ? print("object") : print("no");
-              },
-              icon: Icon(icon),
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          Test.test2.forEach((key, value) {
+            Test.test2[key] = (key == choice) ? true : false;
+          });
+        });
+        print(text);
+      },
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsetsDirectional.all(6),
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
               color:
-                  Test.test2[choice]! ? const Color(0xff366dff) : Colors.white,
-              iconSize: 30,
-              splashRadius: 30,
+                  Test.test2[choice]! ? Colors.white : const Color(0xff366dff),
+              border: Border.all(
+                color: const Color(0xff366dff),
+                width: 3,
+              ),
+            ),
+            child: Center(
+              child: Padding(
+                padding: const EdgeInsets.all(6.0),
+                child: Icon(
+                  icon,
+                  color: Test.test2[choice]!
+                      ? const Color(0xff366dff)
+                      : Colors.white,
+                  size: 30,
+                ),
+              ),
             ),
           ),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        Text(
-          text,
-          style: const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 15,
-            color: Color(0xff366dff),
+          const SizedBox(
+            height: 10,
           ),
-        )
-      ],
+          Text(
+            text,
+            style: const TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 15,
+              color: Color(0xff366dff),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

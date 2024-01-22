@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/screen/appbar_screen.dart';
-import 'package:picnic_news_my/sample01.dart';
+import 'package:picnic_news_my/sample/sample01.dart';
+import 'package:picnic_news_my/screen/main_page/appbar_screen.dart';
 
 class MainContent extends StatefulWidget {
   const MainContent({super.key});
