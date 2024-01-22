@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:picnic_news_my/sample01.dart';
 import 'package:picnic_news_my/screen/appbar_screen.dart';
 import 'package:picnic_news_my/screen/mainstackcontent_screen.dart';
+import 'package:picnic_news_my/screen/newsList.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -63,7 +64,11 @@ class MainScreenState extends State<MainScreen> {
                     ),
                   ],
                 ),
-              )
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const NewsList(),
             ],
           ),
         ),
