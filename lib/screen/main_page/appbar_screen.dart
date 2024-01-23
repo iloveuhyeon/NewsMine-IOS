@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:picnic_news_my/screen/search_page/search_screen.dart';
 import 'package:picnic_news_my/screen/splash_page/splash_screen.dart';
 
 double mediaHeight(BuildContext context, double height) =>
@@ -27,7 +28,13 @@ AppBar appbar(BuildContext context) {
       Padding(
         padding: const EdgeInsets.only(right: 10),
         child: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const SearchScreen(),
+              ),
+            );
+          },
           icon: const Icon(Icons.search),
           color: const Color(0xff366dff),
           iconSize: mediaHeight(context, 0.04),
