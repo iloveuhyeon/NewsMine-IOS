@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:picnic_news_my/screen/main_page/appbar_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -14,7 +13,15 @@ class _SearchScreenState extends State<SearchScreen> {
     return const Scaffold(
       body: Column(
         children: [
-          Text("hello world\n my name is park yu yeon"),
+          Column(
+            children: [
+              Row(
+                children: [
+                  TextField(),
+                ],
+              )
+            ],
+          )
         ],
       ),
     );
