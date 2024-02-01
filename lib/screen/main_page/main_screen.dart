@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:picnic_news_my/sample/sample01.dart';
-import 'package:picnic_news_my/model/mainStackContent.dart';
-import 'package:picnic_news_my/model/newsList.dart';
+import 'package:picnic_news_my/component/main_stack_content.dart';
+import 'package:picnic_news_my/component/news_list.dart';
 import 'package:picnic_news_my/screen/main_page/appbar_screen.dart';
 
 class MainScreen extends StatefulWidget {
