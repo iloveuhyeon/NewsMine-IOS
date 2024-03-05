@@ -60,7 +60,9 @@ class NewsList extends StatelessWidget {
                 Text(
                   "2023.12.21. 오전 9:30",
                   style: TextStyle(
-                      color: Colors.black.withOpacity(0.5), fontSize: 12),
+                    color: Colors.black.withOpacity(0.5),
+                    fontSize: 12,
+                  ),
                 )
               ],
             ),

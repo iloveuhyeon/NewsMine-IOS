@@ -12,17 +12,9 @@ AppBar appbar(BuildContext context) {
     centerTitle: true,
     elevation: 0,
     backgroundColor: Colors.white,
-    title: GestureDetector(
-      onTap: () => Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const SplashScreen(),
-        ),
-      ),
-      child: Image.asset(
-        'asset/logo.jpg',
-        height: mediaHeight(context, 0.05),
-      ),
+    title: Image.asset(
+      'asset/logo.jpg',
+      height: mediaHeight(context, 0.05),
     ),
     actions: [
       Padding(
