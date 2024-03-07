@@ -11,7 +11,6 @@ AppBar appbar(BuildContext context) {
   return AppBar(
     centerTitle: true,
     elevation: 0,
-    backgroundColor: Colors.white,
     title: Image.asset(
       'asset/logo.jpg',
       height: mediaHeight(context, 0.05),

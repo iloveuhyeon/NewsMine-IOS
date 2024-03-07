@@ -12,6 +12,10 @@ class MainContent extends StatefulWidget {
 class _MainContentState extends State<MainContent> {
   @override
   Widget build(BuildContext context) {
+    Size mediaQuary = MediaQuery.of(context).size;
+    double width = mediaQuary.width;
+    double height = mediaQuary.height;
+
     return Stack(
       children: [
         GestureDetector(
